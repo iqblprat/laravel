@@ -226,12 +226,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <svg class="bi">
-                                        <use xlink:href="#door-closed" />
-                                    </svg>
-                                    Log out
-                                </a>
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button class="nav-link d-flex align-items-center gap-2" type="submit"
+                                        onclick="return confirm('Apakah anda yakin ingin logout?');"><svg
+                                            class="bi">
+                                            <use xlink:href="#door-closed" />
+                                        </svg>
+                                        Logout</button>
+                                </form>
                             </li>
                         </ul>
                     </div>
